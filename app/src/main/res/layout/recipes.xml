@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipes"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/border_recipes"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#0000"
+            android:drawableStart="@drawable/arrow_back"
+            android:text="Recipes"
+            android:textAllCaps="false"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/main_border">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:hint="Search..."
+                android:textColorHint="#555" />
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            app:tabBackground="@drawable/buttons_recipes"
+            app:tabIndicator="@drawable/buttons_recipes"
+            app:tabSelectedTextColor="#B461F5"
+            app:tabTextColor="#ffff">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons_recipes"
+                android:text="Balanced" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons_recipes"
+                android:text="High-Fiber" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons_recipes"
+                android:text="High-Protein" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+                 <androidx.viewpager.widget.ViewPager
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"/>
+                 <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/rv"
+                 android:layout_height="match_parent"
+                  android:layout_width="match_parent"
+                 android:layout_weight="1"/>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
